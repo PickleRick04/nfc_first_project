@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nice Weekend &lt;33</title>
+    <title>Nice Weekend ❤️</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffd6e7, #fff0f6, #ffe9b8);
+            background: #fff0f6;
         }
 
         .card {
             text-align: center;
-            padding: 35px 25px;
-            z-index: 10;
         }
 
         .heart {
@@ -32,92 +25,22 @@
         }
 
         h1 {
-            margin: 10px 0 5px;
-            font-size: 34px;
-        }
-
-        p {
-            font-size: 22px;
-            margin: 0;
+            font-size: 40px;
+            margin-top: 15px;
         }
 
         @keyframes beat {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.25);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .sparkle {
-            position: absolute;
-            font-size: 24px;
-            animation: floatUp 4s linear infinite;
-            opacity: 0;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(0.5) rotate(0deg);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            80% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-20vh) scale(1.4) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 
 <body>
-
     <div class="card">
         <div class="heart">❤️</div>
-        <h1>Nice Weekend &lt;33</h1>
-        <p>Hope the jump will be fun</p>
+        <h1>Nice Weekend</h1>
     </div>
-
-    <script>
-        const symbols = ["✨", "💖", "⭐", "💕", "🌸"];
-
-        function createSparkle() {
-            const sparkle = document.createElement("div");
-
-            sparkle.className = "sparkle";
-            sparkle.textContent =
-                symbols[Math.floor(Math.random() * symbols.length)];
-
-            sparkle.style.left =
-                Math.random() * 100 + "vw";
-
-            sparkle.style.animationDuration =
-                3 + Math.random() * 3 + "s";
-
-            sparkle.style.fontSize =
-                16 + Math.random() * 24 + "px";
-
-            document.body.appendChild(sparkle);
-
-            setTimeout(() => {
-                sparkle.remove();
-            }, 6000);
-        }
-
-        setInterval(createSparkle, 250);
-    </script>
-
 </body>
 </html>
