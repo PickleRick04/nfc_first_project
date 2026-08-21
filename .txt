@@ -1,0 +1,24 @@
+Annotation Instructions for Cracks
+Objective
+
+Highlight all visible cracks in the image for computer processing. Annotations must be created as masks that cover the visible crack area as accurately as possible.
+
+Masking Requirements
+Accuracy: high precision. Follow the visible crack width as closely as possible.
+Do not make the mask significantly wider than the actual crack.
+Include thin branches that clearly belong to the crack.
+Small gaps may be ignored if the crack is not visibly continuous.
+Do not annotate shadows, stains, texture, scratches, pores, or edges unless they are clearly part of a crack.
+If several cracks are connected, they may be annotated as one continuous mask.
+If cracks are clearly separate, annotate them separately.
+Annotation Classes
+Crack
+All visible crack regions.
+Include the full visible width of the crack.
+Include connected branches.
+Only annotate areas where a crack can be visually identified with reasonable confidence.
+Background / Non-crack
+Everything that is not annotated as crack is considered background.
+No separate background mask needs to be drawn.
+
+So in that screenshot, “Annotation Instructions” is basically a guide for the person doing the labeling. It does not itself tell SAM what a crack looks like.
